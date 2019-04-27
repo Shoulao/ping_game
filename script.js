@@ -16,7 +16,7 @@ var player2Score = 0;
 window.onload = function() {
     canvas = document.getElementById('gameCanvas');
     canvasContext = canvas.getContext('2d');
-    var framesPerSecond = 40;
+    var framesPerSecond = 60;
     if(stage === 1) {
         setInterval(function() {
             drawEverything();
