@@ -2,8 +2,8 @@ var canvas;
 var canvasContext;
 var ballXPos = 50;
 var ballYPos = 100;
-var bSpeedX = 10;
-var bSpeedY = 5; 
+var bSpeedX = 8;
+var bSpeedY = 4; 
 const PADDLE_THICKNESS = 10;
 const SPEED_INC_RATE = 1.03;
 var paddle1Y = 250;
@@ -18,7 +18,7 @@ var player2Score = 0;
 window.onload = function() {
     canvas = document.getElementById('gameCanvas');
     canvasContext = canvas.getContext('2d');
-    var framesPerSecond = 50;
+    var framesPerSecond = 60;
     if(stage === 1) {
         setInterval(function() {
             startDrawing(stage);
