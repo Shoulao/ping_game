@@ -3,7 +3,7 @@ var canvasContext;
 var ballXPos = 50;
 var ballYPos = 100;
 var bSpeedX = 8;
-var bSpeedY = 4; 
+var bSpeedY = 4;
 const PADDLE_THICKNESS = 10;
 const SPEED_INC_RATE = 1.03;
 var paddle1Y = 250;
@@ -25,7 +25,7 @@ window.onload = function() {
             moveEverything();
         }, 1000/framesPerSecond);
     }
-    canvas.addEventListener('mousemove', function(e) {
+    document.addEventListener('mousemove', function(e) {
         var mousePos = calculateMousePosition(e);
         paddle1Y = mousePos.y-(PADDLE_HEIGHT/2);
     });
@@ -116,15 +116,15 @@ function paddleRightHeight(stage) {
             PADDLE_RIGHT_HEIGHT = 100;
             break;
         case 2:
-            PADDLE_RIGHT_HEIGHT = 150;
+            PADDLE_RIGHT_HEIGHT = 120;
             break;
         case 3:
-            PADDLE_RIGHT_HEIGHT = 200;
-            break;  
+            PADDLE_RIGHT_HEIGHT = 140;
+            break;
         case 4:
-            PADDLE_RIGHT_HEIGHT = 250;
-            break; 
-        default: 
+            PADDLE_RIGHT_HEIGHT = 160;
+            break;
+        default:
             PADDLE_RIGHT_HEIGHT = 100;
     }
     return PADDLE_RIGHT_HEIGHT;
@@ -141,17 +141,17 @@ function paddleRightColor(stage) {
             break;
         case 3:
             paddleColor = 'orange';
-            break;  
+            break;
         case 4:
             paddleColor = 'crimson';
-            break; 
+            break;
         case 5:
             paddleColor = 'red';
-            break; 
+            break;
         case 6:
             paddleColor = 'deeppink';
             break;
-        default: 
+        default:
             paddleColor = 'white';
     }
     return paddleColor;
@@ -200,6 +200,7 @@ function bReset() {
 function ballResetPosition() {
     ballXPos = canvas.width/2;
     ballYPos = canvas.height/2;
+
 }
 
 function ballResetSpeed() {
@@ -221,22 +222,22 @@ function computerMovement(stage) {
                 paddle2Y += 6;
                 break;
             case 2:
-                paddle2Y += 15;
+                paddle2Y += 8;
                 break;
             case 3:
-                paddle2Y += 25;
+                paddle2Y += 9;
                 break;
             case 4:
-                paddle2Y += 30;
+                paddle2Y += 12;
                 break;
             case 5:
-                paddle2Y += 35;
+                paddle2Y += 14;
                 break;
             case 6:
-                paddle2Y += 40;
+                paddle2Y += 15;
                 break;
             case 7:
-                paddle2Y += 45;
+                paddle2Y += 18;
                 break;
             default:
                 paddle2Y += 6;
@@ -248,22 +249,22 @@ function computerMovement(stage) {
                 paddle2Y -= 6;
                 break;
             case 2:
-                paddle2Y -= 15;
+                paddle2Y -= 8;
                 break;
             case 3:
-                paddle2Y -= 25;
+                paddle2Y -= 9;
                 break;
             case 4:
-                paddle2Y -= 30;
+                paddle2Y -= 12;
                 break;
             case 5:
-                paddle2Y -= 35;
+                paddle2Y -= 14;
                 break;
             case 6:
-                paddle2Y -= 40;
+                paddle2Y -= 15;
                 break;
             case 7:
-                paddle2Y -= 45;
+                paddle2Y -= 18;
                 break;
             default:
                 paddle2Y -= 6;
