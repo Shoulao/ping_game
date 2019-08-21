@@ -1,4 +1,10 @@
-## 🦊 JS/Canvas based PING PONG Game
+### 🦊 JS/Canvas based PING PONG Game
+
+## Goal:
+Simple pong game with difficulty level rising
+
+## Technology used:
+HTML, CSS, Canvas, JS
 
 [Click here to play](https://shoulao.github.io/ping_game/)
 
